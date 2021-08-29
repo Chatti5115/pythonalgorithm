@@ -41,3 +41,35 @@ def sum_list(data):
     return data[0] + sum_list(data[1:])
 print("sum_list",sum_list(data))
 
+def palindrome(string):
+    if len(string) <=1:
+        return True
+
+    if string[0] == string[-1]:
+        return palindrome(string[1:-1])
+    else:
+        return False
+
+def func(n):
+    print(n)
+    if n ==1:
+        return n
+    if n%2 ==1:
+        return (func((3*n)+1))
+    else:
+        return (func(int(n/2)))
+
+print("func",func(10))
+
+
+def func1(n):
+    print(n)
+    if n ==1:
+        return 1
+    elif n ==2:
+        return 2
+    elif n ==3:
+        return 4
+
+    return func1(n -1) + func1(n -2) + func1(n -3)
+print("func1 ",func1(5))
